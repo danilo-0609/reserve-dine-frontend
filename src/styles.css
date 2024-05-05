@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Poppins-ExtraLight';
+    src: url('../src/assets/fonts/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../src/assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-LightItalic';
+    src: url('../src/assets/fonts/Poppins-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'BerkshireSwash-Regular';
+    src: url('../src/assets/fonts/BerkshireSwash-Regular.ttf');
+}

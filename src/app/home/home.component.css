@@ -1,0 +1,44 @@
+.navigation-bar {
+    background-color: #FF5757;
+}
+
+a {
+    font-family: 'Poppins-Medium';
+    font-weight: 700;
+}
+
+button, label {
+    font-family: 'Poppins-ExtraLight';
+}
+
+.welcome-title, h1, .restaurants-section {
+    font-family: 'BerkshireSwash-Regular';
+    font-size: 3.0em;
+    font-weight: 700;
+}
+
+.reservation-button {
+    background-color: #FF5757;
+}
+
+button{
+    font-family: 'Poppins-Medium';
+}
+
+.welcome-row, .welcome-description-row, .welcome-button-row {
+    background-color: #FF5757;
+}
+
+p {
+    font-family: 'Poppins-Medium';
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+} 
