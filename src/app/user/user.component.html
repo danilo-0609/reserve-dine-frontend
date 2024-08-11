@@ -1,0 +1,87 @@
+<div class="container-fluid p-0 g-0 m-0 vh-100">
+    <div class="row justify-content-center g-0">
+        <!--Navigation bar-->
+        <div class="col-sm-12">
+            <div class="navigation-bar p-3">
+                <nav class="navbar navbar-expand">
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="#" >Restaurants</a>
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" >Reservations</a>    
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" >Menus</a>
+                    
+                    <div class="col-md-6 navigation-bar mx-4 d-flex justify-content-end">
+                    
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a (click)="navigateToHome()" class="brand-title link-dark text-decoration-none h3" style="font-family: BerkshireSwash-Regular;" href="/home">Reserve & Dine</a> 
+                        </div>
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-dark my-2 my-sm-0" type="button">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <a href="/user" class="link-dark"><i class="fa-2x fa-solid fa-user justify-content-end"></i></a> 
+                        </div>
+                    </div>
+                    
+
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Section Hero-->
+    <div class="container">
+        <div class="row ms-4">
+            
+            <div class="col-md-3">
+                <div class="d-flex justify-content-center">
+                    <img class="img-fluid rounded-circle m-4" width="300" height="200" src="./assets/images/user.png" alt="user photo">
+                </div>
+                <div class="text-center">
+                    <p class="h2">
+                        <span *ngIf="!isEditingName">{{ userName }}</span>
+                        <input *ngIf="isEditingName" type="text" [(ngModel)]="userName" (blur)="saveName(userName)" class="form-control d-inline w-auto">
+                        <button class="btn btn-link p-0 ms-2" (click)="editName()" *ngIf="!isEditingName">
+                            <i style="color: black;" class="fas fa-edit"></i>
+                        </button>
+                    </p>
+                    <p class="h4">Cliente</p>
+                </div>
+            </div>
+            
+            <div class="col-md-9 mt-4">
+                <div class="row ms-4 mt-4">
+                    <div class="col-md-10 mb-3 mt-4">
+                        <h3>Fecha de nacimiento</h3>
+                        <input type="date" placeholder="Fecha de nacimiento" class="form-control" style="background-color: #f0f0f0; border-color: #dcdcdc;">
+                    </div>
+                    <div class="col-md-10 mb-3">
+                        <h3>Correo electrónico</h3>
+                        <input type="text" class="form-control" placeholder="Correo electrónico" style="background-color: #f0f0f0; border-color: #dcdcdc;">
+                    </div>
+                    <div class="col-md-10 mb-3">
+                        <h3>Contraseña</h3>
+                        <input type="password" placeholder="Contraseña" class="form-control" style="background-color: #f0f0f0; border-color: #dcdcdc;">
+                    </div>
+                </div>
+            </div>  
+
+            <div class="row align-items mt-4">
+                <button class="btn save-button">Guardar</button>                    
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

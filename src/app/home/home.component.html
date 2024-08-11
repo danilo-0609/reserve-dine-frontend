@@ -1,15 +1,24 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 g-0">
     <div class="row justify-content-center g-0">
         <!--Navigation bar-->
-        <div class="col-sm-12">
+        <div class="col-12">
             <div class="navigation-bar p-3">
                 <nav class="navbar navbar-expand">
-                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="#" >Restaurants</a>
-                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="#" >Reservations</a>    
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle p-0 border-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/images/user.png" alt="User Profile" class="rounded-circle" width="40" height="40">
+                          </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="/user">User profile</a>
+                          <a class="dropdown-item" href="#">Sign out</a>
+                        </div>
+                      </div>
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="/restaurants">Restaurants</a>
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" >Reservations</a>
                     <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="#" >Menus</a>
-                        
-                    <div class="col-md-6 navigation-bar mx-4 d-flex justify-content-end">
-                        <form class="form-inline my-2 my-lg-0">
+
+                    <div class="col-6 navigation-bar mx-4 d-flex justify-content-end">
+                        <form class="form-inline my-2 my-md-0">
                             <div class="row">
                                 <div class="col">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -20,18 +29,12 @@
                             </div>
                         </form>
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-1">
-                            <a href="#" class="link-dark"><i class="fa-2x fa-solid fa-user justify-content-end"></i></a> 
-                        </div>
-                    </div>
-    
+                                        
                 </nav>
             </div>
         </div>
     </div>
-
+    
     <!--Section Hero-->
     <div class="row g-0">
 
@@ -41,7 +44,7 @@
                 <img class="img-fluid align-items-start p-1" style="max-width:50%;" src="../../assets/images/Reserve & Dine.png" alt="reserve-&-dine">
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <h1 class="brand-title h1 m-4">Reserve & Dine</h1>
+                <h1 class="brand-title m-4">Reserve & Dine</h1>
             </div>
             <div class="col-md-4 d-flex justify-content-center align-items-center  mx-4">
                 <button class="reservation-button btn">Reservation</button>
@@ -81,8 +84,8 @@
                 <div class="col-md-12 mt-4">
                     <p class="h3 align-items-center mt-4">Explore a world of dining options with our comprehensive restaurant directory.</p>
                 </div>
-                <div class="col-md-11 mt-4 d-flex justify-content-end">
-                    <button class="btn mt-4" style="background-color: #FF5757;" type="button">See more</button>
+                <div class="col-md-11 mt-4 d-flex justify-ocntent-end">
+                    <button (click)="navigateToRestaurants()" class="btn mt-4" style="background-color: #FF5757;" type="button">See more</button>
                 </div>
             </div>
         </div>
@@ -115,5 +118,5 @@
                 <h1 class="h1 text-white mt-4 mb-4">Reserve & Dine</h1>
             </div>
         </footer>
-    </div>    
-</div>            
+    </div>
+</div>

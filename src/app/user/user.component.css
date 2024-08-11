@@ -1,0 +1,30 @@
+.navigation-bar {
+    background-color: #FF5757;
+}
+
+.welcome-title, h1, .restaurants-section, h2 {
+    font-family: 'BerkshireSwash-Regular';
+    font-size: 3.0em;
+    font-weight: 700;
+}
+
+.save-button {
+    background-color: #FF5757;
+}
+
+button{
+    font-family: 'Poppins-Medium';
+}
+
+a {
+    font-family: 'Poppins-Medium';
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Poppins-Medium';    
+}
+
+h3 {
+    font-family: 'Poppins-Medium';    
+}

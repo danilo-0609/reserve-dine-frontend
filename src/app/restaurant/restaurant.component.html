@@ -1,0 +1,83 @@
+<div class="container-fluid p-0 g-0 m-0 vh-100">
+    <div class="row justify-content-center g-0">
+        <!--Navigation bar-->
+        <div class="col-sm-12">
+            <div class="navigation-bar p-3">
+                <nav class="navbar navbar-expand">
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" href="#" >Restaurants</a>
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" >Reservations</a>    
+                    <a class="navbar-restaurant link-dark text-decoration-none h4 mx-4" >Menus</a>
+                    
+                    <div class="col-md-6 navigation-bar mx-4 d-flex justify-content-end">
+                    
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a (click)="navigateToHome()" class="brand-title link-dark text-decoration-none h3" style="font-family: BerkshireSwash-Regular;" href="/home">Reserve & Dine</a> 
+                        </div>
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-dark my-2 my-sm-0" type="button">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <a href="/user" class="link-dark"><i class="fa-2x fa-solid fa-user justify-content-end"></i></a> 
+                        </div>
+                    </div>
+    
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Section Hero-->
+
+    <!--Section Hero Title-->
+    <div class="row g-0 mt-4">
+        <div class="col-md-12 mt-4 d-flex justify-content-center">
+            <h1 class="h1">Restaurants</h1>            
+        </div>
+    </div>
+
+    <div *ngFor="let restaurant of restaurants" class="row g-0 m-3">
+        <div class="col-md-12 d-flex mt-4">
+          <div class="col-md-6 d-flex">
+            <img [src]="restaurant.imageUrl" alt="restaurant-photo" style="max-width: 90%;">
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="col-md-12 mt-4">
+              <h2 class="h2 mt-4" style="font-family: BerkshireSwash-Regular; font-size: 3.5em;">
+                {{ restaurant.name }}
+              </h2>
+            </div>
+            <div class="col-md-12 mt-4">
+              <p class="h5 mt-4 text-dark" style="font-family: Poppins-ExtraLight;">
+                {{ restaurant.description }}
+              </p>
+            </div>
+            <div class="col-md-12 mt-4">
+              <button style="background-color: #FF5757;" class="btn mt-4">
+                Check out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Footer-->
+    <div class="footer-row row mb-4" style="background-color: black;">
+        <footer class="col-md-12 d-flex mt-4 mb-4 justify-content-center">
+            <div class="col-md-9 d-flex mt-4 mb-4 justify-content-center">
+                <h1 class="h1 text-white mt-4 mb-4">Reserve & Dine</h1>
+            </div>
+        </footer>
+    </div>
+
+</div>
